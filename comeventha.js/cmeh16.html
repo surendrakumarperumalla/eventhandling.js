@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+    </head>
+    <body>
+        <div id="d1"></div>
+        
+        <script type="text/babel">
+           
+
+            function Rt(){
+            var[x,setX]=React.useState()
+            var[y,setY]=React.useState()
+            var[res,setRes]=React.useState()
+                function tr(e){
+                  setX(+e.target.value)
+
+                }
+                function td(e){
+                  setY(+e.target.value)
+
+                }
+                function yy(){
+                  setRes(x*y)
+
+                }
+                function rr(){
+                  setRes(x/y)
+
+                }
+
+            
+                return <div>
+            <input type="text" value={x} onChange={tr}/>
+            <input type="text" value={y} onChange={td}/>
+             <button onClick={yy}>mul</button>
+             <button onClick={rr}>div</button>
+                    <h1>{res}</h1>
+</div>
+            }
+      ReactDOM.render(<Rt></Rt>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+    </head>
+    <body>
+        <div  id="d1"></div>
+      
+        
+        <script type="text/babel">
+              var ar =[]
+              function ab(e){
+              var d= document.getElementById("d2").value
+              
+             
+            //   console.log(d)
+               ar.push(d)
+               xty()
+              }
+               function xty(){
+                document.getElementById("d3").innerHTML=" "
+               ar.forEach((f,i)=>{
+                 var k=document.createElement("li")
+                 k.innerHTML=f
+                 var d=document.createElement("button")
+                 d.innerHTML="del"
+                 d.onclick=function (){rt(i)}
+                 k.appendChild(d)
+
+                 document.getElementById("d3").appendChild(k)
+               })
+            }      
+            function rt(i){
+                ar.splice(i,1)
+                xty()
+            }
+          
+                    var a=<div>
+                            <div>
+
+                                <input id="d2" type="text"/>
+                                <button onClick={(e)=>ab(e)}>click here to push</button> 
+                                <ul id="d3">
+                                        </ul>
+                                </div>
+                          
+                                
+                               
+                        
+                        
+                        
+                        </div>
+    
+            
+             ReactDOM.render(a,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

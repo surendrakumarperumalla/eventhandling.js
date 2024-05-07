@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+
+
+    
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        function Df(){
+            
+            var[x,setX]=React.useState()
+            var[y,setY]=React.useState()
+            var[res,setRes]=React.useState()
+              function df(e){
+                setX(+e.target.value)
+              }
+              function rt(e){
+                setY(+e.target.value)
+              }
+              function ar(){
+                setRes(x+y)
+
+              }
+             
+               
+            
+            return <div >
+             <input type="text" value={x} onChange={df}/>
+             <input type="text" value={y} onChange={rt}/>
+             <button onClick={ar}>add</button>
+             <h1>{res}</h1>
+                </div> 
+        }
+
+        ReactDOM.render(<Df></Df>,document.getElementById("d1"))
+
+    </script>
+    
+
+</body>
+
+</html>

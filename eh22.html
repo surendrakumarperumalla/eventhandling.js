@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+   
+    <body>
+          
+        <div id="d1"></div>
+        <script  type="text/babel">
+            var ar=[]
+            function ab(e){
+                // if(e.target.checked===false)
+                // {
+                //   var i=ar.indexOf(e.target.value)
+                //   ar.splice(i,1)
+                //   document.getElementById("d2").innerHTML=ar
+                // }
+                // else
+                // {
+                //   ar.push(e.target.value) 
+                //   document.getElementById('d2').innerHTML=ar 
+
+                // }
+                if(e.target.checked===true)
+                {
+                  ar.push(e.target.value)
+                  document.getElementById("d2").innerHTML=ar
+
+                }
+                else
+                {
+                    var i=ar.indexOf(e.target.value)
+                    ar.splice(i,1)
+                    document.getElementById("d2").innerHTML=ar
+                     
+
+                }
+console.log(e)
+
+            }
+            
+
+            var a=<div> 
+                     <input  onChange={(e)=>ab(e)} type="checkbox" name="1" value="reactjs"/>:Reactjs
+                     <br/>
+                     <input  onChange={(e)=>ab(e)}   type="checkbox" name="2" value="Angular"/>:Angular
+                     <br/>
+                     <input    onChange={(e)=>ab(e)}  type="checkbox" name="3" value="Nodejs"/>:Nodejs
+                     <br/>
+                     <input  onChange={(e)=>ab(e)}  type="checkbox" name="4" value="Express"/>:Express
+                     <br/>
+                     <input  onChange={(e)=>ab(e)}  type="checkbox" name="5" value="Mongodb"/>:Mongodb
+                     <br/>
+                     <input  onChange={(e)=>ab(e)}  type="checkbox" name="6" value="Mongoose"/>:Mongoose
+                     <br/>
+                     <input  onChange={(e)=>ab(e)}  type="checkbox" name="7" value="Mysql"/>:Mysql
+
+                         <h1 id="d2"></h1>
+               
+                
+                
+                
+                
+                
+                </div>
+             ReactDOM.render(a,document.getElementById("d1"))
+        </script>
+    </body>
+</html>
