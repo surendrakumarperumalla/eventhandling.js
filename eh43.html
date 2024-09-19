@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <body>
+            <div id="d1"></div>
+           <script type="text/babel">
+            function Rat(props){
+                var[ratingz,setRatingz]=React.useState(0);
+                function ad(){
+                    setRatingz(ratingz=1)
+                }
+                function ac(){
+                    setRatingz(ratingz=2)
+                }
+                function ab(){
+                    setRatingz(ratingz=3)
+                }
+                function as(){
+                    setRatingz(ratingz=4)
+                }
+                function ds(){
+                    setRatingz(ratingz=5)
+                }
+
+
+                return <div>
+                    <h1>
+                  {props.a}  Rating:{ratingz}/5
+                       </h1>
+                    <div>
+                        <i class={ratingz>=1?"bi bi-star-fill":"bi bi-star"} onClick={()=>{ad()}}></i> 
+                        <i class={ratingz>=2?"bi bi-star-fill":"bi bi-star"}onClick={()=>{ac()}}></i>
+                        <i class={ratingz>=3?"bi bi-star-fill":"bi bi-star"} onClick={()=>{ab()}}></i>
+                        <i class={ratingz>=4?"bi bi-star-fill":"bi bi-star"} onClick={()=>{as()}}></i>
+                        <i class={ratingz>=5?"bi bi-star-fill":"bi bi-star"} onClick={()=>{ds()}}></i>
+                    </div>
+                  
+                </div>
+            }
+
+            function All(){
+                return <div>
+                    <Rat a={"battery"}></Rat>
+                    <Rat a={"display"}></Rat>
+                    <Rat a={"ram"}></Rat>
+                    <Rat a={"storage"}></Rat>
+                    <Rat a={"processor"}></Rat>
+                    </div>
+
+            }
+            ReactDOM.render(<All></All>,document.getElementById("d1"))
+            </script>
+        
+        </body>
+</html>

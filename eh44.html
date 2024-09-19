@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <style>
+       
+    </style>
+    <div id="d3"></div>
+    <script type="text/babel">
+        function Dsa(){
+            var[c,setC]=React.useState(true); 
+              function asd(){
+                setC(!c)
+            }
+
+            return <div> 
+                < input class="form-control" type={c?"text":"password"}/>
+                <i  class={c?"bi bi-eye":"bi bi-eye-slash"} onClick={()=>{asd()}}></i> 
+                </div>
+        }
+
+        ReactDOM.render(<Dsa></Dsa>,document.getElementById("d3"));
+    </script>
+</html>
+
